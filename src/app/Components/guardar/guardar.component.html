@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="card col-12">
+      <div class="card-header">
+        <h3 class="card-title">Alta Musica</h3>
+      </div>
+      <!--INICIA FORMULARIO-->
+      <div clas="card-body">
+        <form>
+          <div class="form-group col-md-12">
+            <label for="idMusica"></label>
+            <input type="number" class="form-control" name="idMusica" [(ngModel)]="musica.idMusica" placeholder="Id del Musica"/>
+          </div>
+          <div class="form-group col-md-12">
+              <label for="nombreCancion"></label>
+              <input type="text" class="form-control" name="nombreCancion" [(ngModel)]="musica.nombreCancion" placeholder="Nombre de la Cancion"/>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="genero">GENERO: </label>
+                <select id="genero" class="selectpicker" data-max-options="10" [(ngModel)]="musica.genero"
+                    name="genero">
+                    <option selected>Selecciona un Genero</option>
+                    <option>Rock</option>
+                    <option>Pop</option>
+                    <option>Salsa</option>
+                    <option>Banda</option>
+                    <option>Norteño</option>
+                    <option>Metal</option>
+                    <option>Jazz</option>
+                    <option>Electronica</option>
+                    <option>Corridos Tumbados</option>
+                    <option>Phonk</option>
+                </select>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="duracion"></label>
+              <input type="number" class="form-control" name="duracion" [(ngModel)]="musica.duracion" placeholder="Duracion del Track"/>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="artista"></label>
+              <input type="text" class="form-control" name="artista" [(ngModel)]="musica.artista" placeholder="Artista"/>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="album"></label>
+              <input type="text" class="form-control" name="album" [(ngModel)]="musica.album" placeholder="Album"/>
+            </div>
+          <br>
+          <button type="submit" class="btn btn-primary" (click)="guardar()">Guardar</button>
+        </form>
+      </div>
+      <!--FINALIZA FORMULARIO-->
+    </div>
+  </div>
+  
